@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
+import Restaurant from './Restaurant'
+import {deleteRestaurant} from '../../actions/actions'
+import { connect } from 'react-redux';
 
 class Restaurants extends Component {
   render() {
+    
     return(
       <ul>
-        Restaurants Component
+        {this.props.restaurants.map((restaurant,index) => <Restaurant key={index} restaurant={restaurant} deleteRestaurant={this.props.deleteRestaurant}/>)}
       </ul>
     );
   }
 };
 
-export default Restaurants;
+export default connect(null, {deleteRestaurant})(Restaurants);

@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import RestaurantInput from '../components/restaurants/RestaurantInput';
 import Restaurants from '../components/restaurants/Restaurants';
+import {addRestraunt} from '../actions/actions'
 
 class RestaurantsContainer extends Component {
 
   render() {
+    const {restaurants, addRestraunt} = this.props
     return (
       <div>
-        <RestaurantInput />
-        <Restaurants />
+        <RestaurantInput addRestraunt={addRestraunt} />
+        <Restaurants restaurants={restaurants}/>
       </div>
     )
   }
 }
 
-export default RestaurantsContainer;
+export default connect(({restaurants})=>({restaurants}), {addRestraunt})(RestaurantsContainer);
