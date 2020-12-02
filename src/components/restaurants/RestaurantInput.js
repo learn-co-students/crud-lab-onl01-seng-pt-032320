@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 
 class RestaurantInput extends Component {
 
-  constructor(props) {
-    super(props);
-  }
-  
   state = {
     text: ''
   }
@@ -18,7 +14,7 @@ class RestaurantInput extends Component {
 
   handleOnSubmit(e){
     e.preventDefault()
-    this.props.addRestraunt(this.state.text)
+    this.props.addRestaurant(this.state.text)
     this.setState({
       text: ''
     })

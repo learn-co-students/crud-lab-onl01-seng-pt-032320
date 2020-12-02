@@ -1,6 +1,6 @@
-export const addRestraunt = (name) => ({
+export const addRestaurant = (text) => ({
     type: 'ADD_RESTAURANT',
-    name
+    text
 })
 
 export const deleteRestaurant = (payload) => ({
