@@ -8,3 +8,12 @@ export const deleteRestaurant = (payload) => ({
     payload
 })
 
+export const addReview = (payload) => ({
+    type: 'ADD_REVIEW',
+    review: payload
+})
+
+export const deleteReview = (payload) => ({
+    type: 'DELETE_REVIEW',
+    payload
+})
