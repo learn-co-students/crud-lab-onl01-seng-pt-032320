@@ -7,8 +7,9 @@ class ReviewsContainer extends Component {
 
   render() {
     return (
+    
       <div>
-        {/* the restaurant is passed down to both of these from Restaurant.js to ReviewsContainer in props.  */}
+        {/* the restaurant is passed down to both of these from Restaurant.js to ReviewsContainer in.  */}
         <ReviewInput addReview={this.props.addReview} restaurantId={this.props.restaurant.id} />
         <Reviews reviews={this.props.reviews} restaurantId={this.props.restaurant.id} deleteReview={this.props.deleteReview} />
       </div>

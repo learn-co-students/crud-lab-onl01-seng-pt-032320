@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 class Review extends Component {
 
   render() {
-    debugger
     const { review } = this.props;
 
     return (
