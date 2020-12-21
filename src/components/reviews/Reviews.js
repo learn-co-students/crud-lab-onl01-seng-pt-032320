@@ -9,13 +9,15 @@ class Reviews extends Component {
     const { reviews, restaurantId, deleteReview } = this.props;
     const relatedReviews =  reviews.filter(review => review.restaurantId === restaurantId)
     const reviewItems = relatedReviews.map((review,index)=>{
-    return <Review key={index} review={review} deleteReview={deleteReview}/>
-  } )
+    return <Review key={index} review={review} deleteReview={deleteReview} />
+  }) 
 
     return (
-      <ul>
-       {reviewItems}
-      </ul>
+      <div>
+        <ul>
+          {reviewItems}
+        </ul>
+      </div>
     );
   }
 };

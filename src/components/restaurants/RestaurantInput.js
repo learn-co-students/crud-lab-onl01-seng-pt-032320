@@ -1,22 +1,25 @@
 import React, { Component } from 'react';
 
 class RestaurantInput extends Component {
-  
-  state ={
-    name: ''
+  constructor(props){
+  super(props);
+    this.state ={
+    text:''
   }
 
-  handleOnChange(e){
+}
+
+  handleOnChange(event){
     this.setState({
-      name: e.target.value
+     text: event.target.value
     })
   }
 
-  handleOnSubmit(e){
-    e.preventDefault()
-    this.props.addRestaurant(this.state.name)
+  handleOnSubmit(event){
+    event.preventDefault()
+    this.props.addRestaurant(this.state.text)
     this.setState({
-      name: '',
+      text:'',
     })
 
   }
@@ -24,9 +27,9 @@ class RestaurantInput extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handleOnSubmit}>
+        <form onSubmit={this.handleOnSubmit.bind(this)}>
           <label>Restaurant Name:</label><br/>
-          <input type="text" value={this.state.name} onChange={this.handleOnChange}/>
+          <input type="text" value={this.state.text} onChange={this.handleOnChange.bind(this)}/>
           <input type='submit' />
         </form>
       </div>

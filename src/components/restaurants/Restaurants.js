@@ -3,13 +3,24 @@ import Restaurant from './Restaurant.js'
 
 class Restaurants extends Component {
   
-  renderRestaurants = () => {this.props.restaurants.map(restaurant =><li><Restaurant {...restaurant} delete={this.props.delete} key={restaurant.id}/></li>)}
+  
   
   
   render() {
+    const { restaurants, deleteRestaurant } = this.props;
+    const restaurantList = restaurants.map(restaurant => {
+      return (
+        <Restaurant
+            key={restaurant.id}
+            restaurant={restaurant}
+            deleteRestaurant={deleteRestaurant}
+        />
+      )
+    });
+
     return(
       <ul>
-        {this.renderRestaurants()}
+        {restaurantList}
       </ul>
     );
   }

@@ -5,7 +5,8 @@ import manageRestaurant from './reducers/manageRestaurant';
 import{ combineReducers } from 'redux'
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import {restaurants,reviews} from './reducers/manageRestaurant.js'
+import restaurants from './reducers/manageRestaurant.js'
+import reviews from './reducers/manageRestaurant.js'
 
 export default combineReducers({
   restaurants,
