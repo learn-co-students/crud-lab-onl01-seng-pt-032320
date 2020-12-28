@@ -8,7 +8,7 @@ class RestaurantsContainer extends React.Component {
     return(
       <div>
         <RestaurantInput addRestaurant={this.props.addRestaurant}/>
-        <Restaurants restaurants={this.props.restaurant} deleteRestaurant={this.props.deleteRestaurant}/>
+        <Restaurants restaurants={this.props.restaurants} deleteRestaurant={this.props.deleteRestaurant}/>
       </div>
     )
   }

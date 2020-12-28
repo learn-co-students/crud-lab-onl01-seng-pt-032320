@@ -20,3 +20,5 @@ class Restaurant extends React.Component {
     )
   }
 }
+
+export default Restaurant
